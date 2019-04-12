@@ -1,0 +1,1271 @@
+/*===========================================
+NAV:
+https://stackoverflow.com/questions/38780690/how-to-create-submenu-in-drop-down-html-css
+============================================*/
+
+body {
+    background: #f9f6f3;
+}
+
+
+#menu {
+  background: #4e6376;
+  color: #ffff;
+  height: 37px;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+ 
+}
+
+#menu ul,
+#menu li {
+  margin: 0 0;
+  padding:0 0;
+  list-style: none;
+  display: inline;
+}
+
+#menu ul {
+  height: 35px;
+  text-align: center;
+  display: inline;
+  margin: 0 auto;
+    
+}
+
+#menu li {
+  float:;
+  display: inline-block;
+  margin: 0 auto;
+  position: relative;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  border-right: 1px solid #4e6376;
+  border-left: 1px solid #4e6376;
+}
+
+#menu li:first-child {
+  border-left: none;
+}
+
+#menu a {
+  line-height: 35px;
+  padding: 0 14px;
+  text-decoration: none;
+  color: #ffff;
+
+}
+
+#menu li:hover ,
+#menu li a:hover {
+  background: #314353;
+}
+
+#menu input {
+  display: none;
+  margin: 0 0;
+  padding: 0 0;
+  width: 80px;
+  height: 35px;
+  opacity: 0;
+  cursor: pointer
+}
+
+#menu label {
+  font: bold 30px Arial;
+  display: none;
+  width: 35px;
+  height: 36px;
+  line-height: 36px;
+  text-align: center
+}
+
+#menu label span {
+  font-size: 12px;
+  position: absolute;
+  left: 35px
+}
+
+#menu ul.menus {
+  height: auto;
+  width: 180px;
+  background: #314353;
+  position: absolute;
+  z-index: 99;
+  display: none;
+  border: 0;
+}
+
+#menu ul.menus li {
+  display: block;
+  width: 100%;
+  font: 12px Arial;
+  text-transform: none;
+}
+
+#menu li:hover ul.menus {
+  display: block;
+  color: #314353;
+}
+
+#menu a.home {
+  background: #c00;
+}
+
+#menu a.prett {
+  padding: 0 27px 0 14px;
+}
+
+#menu a.prett::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-width: 6px 5px;
+  border-style: solid;
+  border-color: #eee transparent transparent transparent;
+  position: absolute;
+  top: 15px;
+  right: 9px
+}
+
+#menu ul.menus a:hover {
+  color: #b98052;
+}
+
+#menu ul.menus .submenu {
+  display: none;
+  position: absolute;
+  left: 180px;
+  background: #314353;
+  top: 0;
+  width: 180px;
+}
+
+#menu ul.menus .submenu li {
+  background: #314353;
+}
+
+#menu ul.menus .has-submenu:hover .submenu {
+  display: block;
+}
+
+
+
+.home-top1 {
+    width: 9rem;
+    height: 2rem;
+    background: #6a2e23; 
+    position: absolute;
+    color: white;
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    top: 30px;
+    left: 30px;
+}
+
+.home-top1:hover {
+    width: 9rem;
+    height: 2rem;
+    background: #863b2d; 
+    position: absolute;
+    color: white;
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    top: 30px;
+    left: 30px;
+}
+
+.home-top2 {
+    width: 9rem;
+    height: 2rem;
+    background: #6a2e23; 
+    position: absolute;
+    color: white;
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    top: 70px;
+    left: 30px;
+}
+
+.home-top2:hover {
+    width: 9rem;
+    height: 2rem;
+    background: #863b2d; 
+    position: absolute;
+    color: white;
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    top: 70px;
+    left: 30px;
+}
+
+.home-top3 {
+    width: 9rem;
+    height: 2rem;
+    background: #6a2e23; 
+    position: absolute;
+    color: white;
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    top: 110px;
+    left: 30px;
+}
+
+.home-top3:hover {
+    width: 9rem;
+    height: 2rem;
+    background: #863b2d; 
+    position: absolute;
+    color: white;
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    top: 110px;
+    left: 30px;
+}
+
+
+#cart {
+    font-size: 30px;
+    text-align: center;
+    display: block;
+    right: 30px;
+    top: 20px;
+    position: absolute;
+    color: #4e6376;
+}
+
+#cart:hover {
+    font-size: 30px;
+    text-align: center;
+    display: block;
+    right: 30px;
+    top: 20px;
+    position: absolute;
+    color: #4e6376;
+}
+
+
+
+
+/*===============================
+=================================*/
+
+.above-nav {
+    height: 165px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.above-nav p{
+    font-size: .85rem;
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+}
+
+.top-logo {
+    background-image: url(../images/logo.png);
+    height: 122px;
+    width: 210px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+
+.check-overlay {
+    width: 600px;
+    z-index: 10;
+    position: absolute;
+    bottom: 0;
+}
+
+/* New Overlay Form Box */
+.check-overlay-box {
+    width: 600px;
+    height: 76px;
+    position: absolute;
+    background: #271d1c;
+    opacity: .88;
+    z-index: -10;
+}
+
+.input-boxes {
+    width: 140px;
+    margin-left: 10px;
+    float: left;
+    display: inline;
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    
+}
+
+.input-boxes input {
+    font-size: .7rem;
+    height: 2rem;
+    margin-bottom: .7rem;
+}
+
+.input-boxes label {
+    color: white;
+    font-size: .7rem;
+    float: left;
+    margin-top: 8px;
+}
+
+.input-boxes-2 {
+    width: 140px;
+    margin-left: 10px;
+    display: inline;
+    float: left;
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    
+}
+
+.input-boxes-2 input {
+    font-size: .7rem;
+    height: 2rem;
+    margin-bottom: .7rem;
+}
+
+.input-boxes-2 label {
+    color: white;
+    font-size: .7rem;
+    float: left;
+    margin-top: 8px;
+}
+
+.input-boxes-3 {
+    width: 90px;
+    margin-left: 10px;
+    float: left;
+    display: inline;
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    
+}
+
+.input-boxes-3 label {
+    color: white;
+    font-size: .7rem;
+    float: left;
+    margin-top: 0px;
+}
+
+#myList {
+    font-size: .7rem;
+    height: 2rem;
+    width: 4rem;
+    display: inline;
+    float: left;
+}
+
+.button.large.availability {
+    font-size: 0.75rem;
+    float: right;
+    width: 10rem;
+    height: 2rem;
+    display: inline;
+    opacity: 1.0;
+    margin-right: 10px;
+    margin-top: 27px;
+    background: #6a2e23;
+}
+
+.button.large.availability:hover {
+    font-size: 0.75rem;
+    float: right;
+    width: 10rem;
+    height: 2rem;
+    display: inline;
+    opacity: 1.0;
+    margin-right: 10px;
+    margin-top: 27px;
+    background: #863b2d;
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+}
+
+
+.button.large.availability a p {
+    font-size: .83rem; 
+    text-align: center;
+    display: inline-block;
+    line-height:inherit;
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    color: white;
+}
+
+/*=======================================
+https://foundation.zurb.com/building-blocks/blocks/responsive-hero-section.html
+=======================================*/
+
+
+.hero-section {
+  background: url(../images/homepage-image.jpg) 50% no-repeat;
+  background-size: cover;
+  height: 55vh;
+  position: relative;
+  text-align: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: -0;
+}
+
+.hero-section .hero-section-text {
+  color: #fefefe;
+  text-shadow: 1px 1px 2px #0a0a0a;
+}
+
+/*=======================================
+=========================================*/
+
+.smores-pic {
+    background-image: url(../images/smores-pic.png);
+    height: 180px;
+    width: 327px;
+    margin-top: .5rem;
+    text-align: center;
+    display: inline-block;
+    position: relative; 
+}
+
+.smores-pic button {
+    border-style: solid;
+    border-width: thin;
+    color: white;
+    border-color: white;
+    width: 9rem;
+    font-family: "Lato", sans-serif;
+    font-weight: 600;
+    display: inline;
+    text-align: center;
+    margin-top: 2.3rem;
+}
+
+.smores-pic button a p {
+    margin: 0 auto;
+    padding: .5rem;
+    color: white;
+}
+
+.smores-message {
+    height: 180px;
+    display: inline-block;
+    text-align: center;
+    background: #b98154;
+    margin-top: .5rem;
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    vertical-align: top;
+}
+
+.smores-message p{
+    font-size: 1.5rem;
+    padding: 1rem;
+    margin-top: 2rem;
+    color: white;
+}
+
+.smores-message em{
+    font-size: 1rem;
+}
+
+.space {
+    height: 40px;
+    display: inline-block;
+}
+
+#wrapper-welcome {
+    width: 75%;
+    margin: 0 auto;
+    text-align: center;
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+}
+.signature {
+    color: #b98154; 
+    font-size: 1.2rem;
+    font-weight: 
+}
+
+.email-form {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 1rem;
+    background: #4e6376;
+    padding: 2rem 10% 2rem 10%;
+    font-family: "Lato", sans-serif;
+    position: absolute;
+}
+
+.email-form h3 {
+    font-size: 19px;
+    font-family: "Lato", sans-serif;
+    color: white;
+    position: relative;
+}
+
+.submit {
+    text-transform: uppercase;
+    font-size: .83rem;
+    font-weight: 500;
+    font-family: "Lato", sans-serif;
+    margin: 0;
+    float:;
+    display: inline-block;
+    height: 2rem;
+    width: 7rem;
+    display: inline;
+    opacity: 1.0;
+    background: #6a2e23;
+    color: white;
+    border: none;
+    position: relative;
+    
+}
+
+.submit:hover {
+    text-transform: uppercase;
+    font-size: .83rem;
+    font-weight: 500;
+    font-family: "Lato", sans-serif;
+    margin: 0;
+    float;
+    display: inline-block;
+    height: 2rem;
+    width: 7rem;
+    display: inline;
+    opacity: 1.0;
+    background: #863b2d;
+    color: white;
+    border: none;
+    position: relative;
+    
+}
+
+input.entry-form {
+    width: 18rem;
+    float:;
+    height: 2rem;
+    position: relative;
+    font-size: 13px;
+    display: inline-block;
+    
+}
+
+.entry-submit {
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+    display: inline-block;
+}
+
+/*==================================
+FOOTER BELOW
+====================================*/
+/*
+.footer-space {
+    height: 211px;
+    width: 100%;
+    
+}*/
+
+ul.social-buttons {
+  text-align: center;
+  margin: auto;
+}
+
+ul.social-buttons li {
+  display: inline-block;
+  margin: 5px;
+  margin-top: 20px;
+
+}
+
+.footer {
+  position: relative;
+  padding: .25rem;
+  border: 1px solid rgba(10, 10, 10, 0.05);
+  border-radius: 3px;
+  background-color: wh;
+  font-size: .85rem;
+  font-family: "Open Sans" , sans-serif;
+  font-weight: 600;
+  bottom: 0;
+  width: 100%;
+  margin: 250px 0 auto;
+  
+}
+
+.footer p{
+    font-family: "Open Sans", sans-serif;
+    font-size: .6rem;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 30px;
+}
+
+i.up {
+  border: solid #6a2e23;
+  border-width: 0 4px 4px 0;
+  display: inline-block;
+  padding: 7px;
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+  text-align: center;
+  margin: 7px;
+  
+}
+
+i.up:hover {
+  border: solid #863b2d;
+  border-width: 0 4px 4px 0;
+  display: inline-block;
+  padding: 7px;
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+  text-align: center;
+  margin: 7px;
+  
+}
+
+/* Style all font awesome icons */
+.fa {
+  padding: 15px;
+  font-size: 30px;
+  width: 40px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+  color: white;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+  background: #b98154;
+  color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+  background: #b98154;
+  color: white;
+}
+
+.fa-instagram {
+  background: #b98154;
+  color: white;
+}
+
+
+/*=========================
+MOBILE NAV - https://foundation.zurb.com/building-blocks/blocks/multilevel-accordion-menu.html
+============================*/
+.multilevel-accordion-menu .is-accordion-submenu-parent a {
+  background: #4e6376;
+  text-align: left;
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+}
+
+.multilevel-accordion-menu .is-accordion-submenu a {
+  background: #314353;
+  box-shadow: inset 0 -1px #4e6376;
+}
+
+.menu .sublevel-2 .subitem {
+    font-size: .9rem;
+    background: #243543;
+}
+
+a i.fa-bars {
+    font-size: 1.4rem;
+}
+
+.multilevel-accordion-menu .sublevel-1 {
+  text-indent: 1rem;
+}
+
+.multilevel-accordion-menu .sublevel-2 {
+  text-indent: 2rem;
+}
+
+.multilevel-accordion-menu .sublevel-3 {
+  text-indent: 3rem;
+}
+
+.multilevel-accordion-menu .sublevel-4 {
+  text-indent: 4rem;
+}
+
+.multilevel-accordion-menu .sublevel-5 {
+  text-indent: 5rem;
+}
+
+.multilevel-accordion-menu .sublevel-6 {
+  text-indent: 6rem;
+}
+
+.multilevel-accordion-menu a {
+  color: #fefefe;
+  box-shadow: inset 0 -1px #314353;
+}
+
+.multilevel-accordion-menu a::after {
+  border-color: #fefefe transparent transparent;
+}
+
+.multilevel-accordion-menu .menu > li:not(.menu-text) > a {
+  padding: 1.1rem 1rem;
+}
+
+.menu a{
+    padding: .3rem;
+    padding-right: 1rem;
+}
+
+
+/*========================*/
+
+
+
+/*=========================================================
+MEDIA QUERIES
+==========================================================
+
+Mobile
+=========================================================*/
+
+
+@media screen and (max-width: 39.9375em) {
+    
+
+    
+i#phone {
+    color: white;
+    z-index: 10;
+    font-size: ;
+    position: absolute;
+    font-size: 1.4rem;
+    margin-left: 1rem;
+    display: block;
+    right: 175px;
+}
+    
+i#gift {
+    color: white;
+    z-index: 10;
+    font-size: ;
+    position: absolute;  
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    display: block;
+    right: 105px
+}    
+
+i#blog {
+    z-index: 10;
+    font-size: ;
+    position: absolute; 
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    display: block;
+    color: white;
+    right: 35px;
+}
+    
+    
+i p {
+    font-size: 12px;
+    font-family: "Lato", sans-serif;
+    margin: 0;
+}
+    
+ul.small-menu i{
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    display:inline-block;
+    text-align: center;
+
+ }
+    
+.above-nav {
+    height: 150px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.above-nav p{
+    font-size: .85rem;
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+}
+
+.top-logo {
+    background-image: url(../images/logo2.png);
+    height: 96px;
+    width: 165px;
+    text-align: center;
+    margin-top: 15px;
+}    
+    
+#menu {
+  background: #4e6376;
+  color: #ffff;
+  height: 60px;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+ 
+}
+    
+.check-overlay {
+    width: 400px;
+    z-index: 10;
+    position: absolute;
+    bottom: 0;
+}
+
+/* New Overlay Form Box */
+.check-overlay-box {
+    width: 400px;
+    height: 76px;
+    position: absolute;
+    background: #271d1c;
+    opacity: .88;
+    z-index: -10;
+}
+
+.input-boxes {
+    width: 140px;
+    margin-left: 10px;
+    float: left;
+    display: inline;
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    
+}
+
+.input-boxes input {
+    font-size: .7rem;
+    height: 2rem;
+    margin-bottom: .7rem;
+}
+
+.input-boxes label {
+    color: white;
+    font-size: .7rem;
+    float: left;
+    margin-top: 8px;
+}
+
+.input-boxes-2 {
+    width: 140px;
+    margin-left: 10px;
+    display: inline;
+    float: left;
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    
+}
+
+.input-boxes-2 input {
+    font-size: .7rem;
+    height: 2rem;
+    margin-bottom: .7rem;
+}
+
+.input-boxes-2 label {
+    color: white;
+    font-size: .7rem;
+    float: left;
+    margin-top: 8px;
+}
+
+.input-boxes-3 {
+    width: 90px;
+    margin-left: 10px;
+    float: left;
+    display: inline;
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    
+}
+
+.input-boxes-3 label {
+    color: white;
+    font-size: .7rem;
+    float: left;
+    margin-top: 0px;
+}
+
+#myList {
+    font-size: .7rem;
+    height: 2rem;
+    width: 4rem;
+    display: inline;
+    float: left;
+}
+
+.button.large.availability {
+    font-size: 0.75rem;
+    width: 400px;
+    height: 2rem;
+    display: inline-block;
+    opacity: 1.0;
+    background: #6a2e23;
+    margin: 0;
+}
+
+.button.large.availability:hover {
+    font-size: 0.75rem;
+    width: 400px;
+    height: 2rem;
+    display: inline-block;
+    opacity: 1.0;
+    background: #863b2d;
+    margin: 0;
+}
+
+
+
+.button.large.availability a p {
+    font-size: .83rem; 
+    text-align: center;
+    display: inline-block;
+    line-height:inherit;
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    color: white;
+}
+    
+    
+.smores-pic {
+    background-image: url(../images/smores-piclarge.png);
+    height: 207px;
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: .5rem;
+    text-align: center;
+    display: inline;
+    position: relative;
+}
+
+.smores-pic button {
+    border-style: solid;
+    border-width: thin;
+    color: white;
+    border-color: white;
+    width: 9rem;
+    font-family: "Lato", sans-serif;
+    font-weight: 600;
+    display: inline;
+    text-align: center;
+    margin-top: 3.3rem;
+}
+
+.smores-pic button a p {
+    margin: 0 auto;
+    padding: .5rem;
+    color: white;
+}
+
+.smores-message {
+    height: 207px;
+    width: 400px;
+    margin: 0 auto;
+    margin-bottom: .5rem;
+    text-align: center;
+    display: inline;
+    position: relative;
+    
+}
+
+.smores-message p{
+    font-size: 1.5rem;
+    padding: 1rem;
+    margin-top: 2rem;
+    color: white;
+}
+
+.smores-message em{
+    font-size: 1rem;
+}
+
+.space {
+    height: 20px;
+    display: inline-block;
+}
+    
+#wrapper-welcome {
+    width: 65%;
+    margin: 0 auto;
+    text-align: center;
+    font-family: "Lato", sans-serif;
+    font-size: 15px;
+}
+.signature {
+    color: #b98154; 
+    font-size: 1.2rem;
+    font-weight: 
+}  
+    
+.email-form {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 1rem;
+    background: #4e6376;
+    padding: 2rem 10% 2rem 10%;
+    font-family: "Lato", sans-serif;
+    position: absolute;
+}
+
+.email-form h3 {
+    font-size: 17px;
+    font-family: "Lato", sans-serif;
+    color: white;
+    position: relative;
+}
+
+.submit {
+    text-transform: uppercase;
+    font-size: .83rem;
+    font-weight: 500;
+    font-family: "Lato", sans-serif;
+    margin: 0;
+    float:;
+    display: inline-block;
+    height: 2rem;
+    width: 7rem;
+    display: inline;
+    opacity: 1.0;
+    background: #6a2e23;
+    color: white;
+    border: none;
+    position: relative;
+    
+}
+
+.submit:hover {
+    text-transform: uppercase;
+    font-size: .83rem;
+    font-weight: 500;
+    font-family: "Lato", sans-serif;
+    margin: 0;
+    float;
+    display: inline-block;
+    height: 2rem;
+    width: 7rem;
+    display: inline;
+    opacity: 1.0;
+    background: #863b2d;
+    color: white;
+    border: none;
+    position: relative;
+    
+}
+
+input.entry-form {
+    width: 18rem;
+    float:;
+    height: 2rem;
+    position: relative;
+    font-size: 13px;
+    display: inline-block;
+    
+}
+
+.entry-submit {
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+    display: inline-block;
+}
+
+.footer {
+  position: relative;
+  padding: .25rem;
+  border: 1px solid rgba(10, 10, 10, 0.05);
+  border-radius: 3px;
+  background-color: wh;
+  font-size: .85rem;
+  font-family: "Open Sans" , sans-serif;
+  font-weight: 600;
+  bottom: 0;
+  width: 100%;
+  margin: 300px 0 auto;
+  
+}
+
+    
+    
+}
+
+/*-------------------------------------------------------------------------
+  TABLET
+---------------------------------------------------------------------------*/
+
+@media screen and (min-width: 40em) and (max-width: 63.9375em){
+    
+
+ .smores-pic {
+    background-image: url(../images/smores-pic.png);
+    height: auto;
+    max-width: 327px;
+    margin: 0 auto;
+    margin-right:0;
+    margin-top: .5rem;
+    text-align: center;
+    display: inline-block;
+    position: relative; 
+}
+
+.smores-pic button {
+    border-style: solid;
+    border-width: thin;
+    color: white;
+    border-color: white;
+    width: 9rem;
+    font-family: "Lato", sans-serif;
+    font-weight: 600;
+    display: inline;
+    text-align: center;
+    margin-top: 2.3rem;
+}
+
+.smores-pic button a p {
+    margin: 0 auto;
+    padding: .5rem;
+    color: white;
+}
+
+    
+.smores-message {
+    height: 180px;
+    width: 327px;
+    display: inline-block;
+    text-align: center;
+    background: #b98154;
+    margin: 0 auto;
+    margin-left: 0;
+    margin-top: .5rem;
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    vertical-align: top;
+}
+
+.smores-message p{
+    font-size: 1.3rem;
+    padding: 1rem;
+    margin-top: 1rem;
+    color: white;
+}
+
+.smores-message em{
+    font-size: .9rem;
+}
+    
+}
+
+
+/*-------------------------------------------------------------------------
+DESKTOP
+---------------------------------------------------------------------------*/
+
+@media screen and (min-width: 64em) {
+    
+
+.smores-pic {
+    background-image: url(../images/smores-piclarge.png);
+    height: auto;
+    max-width: 420px;
+    margin: 0 auto;
+    margin-top: .5rem;
+    margin-right: 0;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+ 
+}
+
+.smores-pic button {
+    border-style: solid;
+    border-width: thin;
+    color: white;
+    border-color: white;
+    width: 10rem;
+    font-family: "Lato", sans-serif;
+    font-weight: 600;
+    display: inline;
+    text-align: center;
+    margin-top: 3.3rem;
+}
+
+.smores-pic button a p {
+    margin: 0 auto;
+    padding: .5rem;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.smores-message {
+    height: 207px;
+    width: 420px;
+    display: inline-block;
+    text-align: center;
+    background: #b98154;
+    margin: 0 auto;
+    margin-left: 0;
+    margin-top: .5rem;
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+}
+
+.smores-message p{
+    font-size: 1.5rem;
+    padding: 1rem;
+    margin-top: 2rem;
+    color: white;
+}
+
+.smores-message em{
+    font-size: 1rem;
+}
+
+#wrapper-welcome {
+    width: 65%;
+    margin: 0 auto;
+    text-align: center;
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+}
+.signature {
+    color: #b98154; 
+    font-size: 1.2rem;
+    font-weight: 
+}   
+   
+
+}
+
